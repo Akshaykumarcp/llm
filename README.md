@@ -11,11 +11,20 @@ Pattern 1
   - Pretrained LLM
     - Prepare data
       - Use [datatrove](https://github.com/huggingface/datatrove/) lib and generate 15T dataset such as [fineweb](https://huggingface.co/datasets/HuggingFaceFW/fineweb)
+      - Utilize available data
+        - [SlimPajama](https://huggingface.co/datasets/cerebras/SlimPajama-627B)
+        - For other datasets, refer LLM excel "Dataset" sheet
     - Training
       - Use [Nanotron](https://github.com/huggingface/nanotron) for training
     - Evaluation
       - Use [lighteval](https://github.com/huggingface/lighteval) for testing
+      - Benchmarks
+        - MMLU, [paper](https://arxiv.org/abs/2009.03300), [github](https://github.com/hendrycks/test), [standford](https://crfm.stanford.edu/2024/05/01/helm-mmlu.html)
+        - For other benchmarks, refer LLM excel "[sheetname]"
   - SFT
   - RFHF
+  - Instruct LLM
+    - Datasets:
+      - [CrystalCoderDatasets](https://huggingface.co/datasets/LLM360/CrystalCoderDatasets)
 
 
