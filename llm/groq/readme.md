@@ -11,3 +11,5 @@
     ```
     streamlit run app.py
     ```
+
+### Watch application demo at [Youtube](https://youtu.be/Ul4VG45Btis?si=-7bXYXDPWGurTYye)
