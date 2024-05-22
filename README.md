@@ -4,7 +4,10 @@
 - [llamafile](https://github.com/Mozilla-Ocho/llamafile)
 - [Huggingface]()
 - [gpt4all](https://github.com/nomic-ai/gpt4all)
-
+- [OpenLLM](https://github.com/bentoml/OpenLLM)
+- [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)
+- [vllm](https://github.com/vllm-project/vllm)
+  
 #### LLM from scratch 
 
 Pattern 1
@@ -27,4 +30,9 @@ Pattern 1
     - Datasets:
       - [CrystalCoderDatasets](https://huggingface.co/datasets/LLM360/CrystalCoderDatasets)
 
-
+#### LLM deployment
+- [bentoml](https://docs.bentoml.com/en/latest/use-cases/large-language-models/vllm.html)
+- Managed services:
+  - https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints.html
+  - https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints?view=azureml-api-2
+- [MLFlow]()
