@@ -147,6 +147,119 @@
   - most likely next word
 - Prompt
 
+#### Building blocks of LLM Applications
+- RAG
+  - No training required
+  - Generate text using additional info fected from an external data source
+  - Components
+    - Retriever
+      - Sources relevant info from large corpus
+    - Ranker
+      - Prioritizes information
+    - Generator
+      - Generate human like text
+  - Techniques
+    - RAG sequence
+      - For each input query (like capter topic), the model retrieves a set of relevant documenets or info.
+      - Then considers all these documents together to generate a single, cohesive response (entire chapter) that reflects the combined info.
+
+      - Whats the difference?
+        - Considers entire input query at once for retriver
+        - Response generation: Synthesis holistic response from batch of information
+    - RAG Token
+      - For each part of the response (like each sentence or even each word), the model retrievers relevant documents.
+      - response is contructed incrementally, with each part reflecting info from documents retrieved for that specific part.
+      - Whats the difference?
+        - Granular level, leads to more precific information
+        - Response generation: piece meal fashion considering different sources for different parts of response
+  - RAG pipeline
+    - Ingestion
+      - Load
+      - Chunks
+      - Embedding
+      - Vector DB
+    - Retrieval
+      - Query
+      - Index
+      - Top K results
+    - Generation
+      - Top K results
+      - Response to user
+  - RAG app
+    - Prompt (user query) + chat history - enhanced prompt - embedding model - embedding (similarity search) - DB - private content - augmented prompt - LLM - highly accurate reponse
+  - RAG Evaluation
+    - RAG Triad
+      - Context relevance
+        - Retrieved context relevant to query?
+      - Groundedness
+        - response supported by context?
+      - Answer relevance
+        - Answer relevant to query?
+
+  - Vector DB
+    - optimized for store and query vectors
+    - vector: sequence of numbers called dimenstions, used to captre important features of data
+    - embeddings in llm are high dim vectors
+    - vectors are generated using deep learning embedding models and represent semantic content of data, not the underlying words or pixels
+      - optimized for multidimensional spaces, relationship is based on distance and similarities in high-dim vector space
+    - Embedding distance
+      - Dot product
+      - Cosine distance
+    Similar vectors
+      - KNN algo
+      - ANN algo
+        - Faster and efficient than KNN
+        - Methods:
+          - HNSW
+          - FAISS
+          - Annoy
+    - Workflow
+      - Vectors
+      - Indexing
+      - vector DB
+      - Querying
+      - Post processing
+        - Rerank
+    - Example DBs:
+      - Pinecone
+      - Oracle
+      - Chroma
+      - FAISS
+      - Weaviate
+    - Features for LLM:
+      - Accuracy
+      - Latency
+      - Scalability
+    - Role with LLM:
+      - Address hallucination.
+      - Augment prompt with enterprise-specific content to produce better responses.
+      - Avoid exceeding LLM token limits by using most relevant content.
+      - Cheaper than fine tune
+      - Real time updated knowledge base
+      - Cache previous LLM prompts/responses to improve performance and reduce costs
+  - Search
+    - Keyword search
+      - search terms
+      - simplest form:
+        - search based on exact matches of user provided keywords in DB or index
+      - Based on presence and frequence of query term
+        - Example: BM25
+    - Semantic search
+      - Search by meaning
+      - Retrieval done by understanding intent and context
+      - Ways:
+        - Dense retrieval: uses text embeddings
+          - Embed query and documents to identify and rank relevant documents for a query
+          - enables retrieval system to understand and match based on contextual similarities between queries and documents
+        - Reranking: assigns a relevance score
+          - Assigns relevance score to query and reponse pairs from initial search results
+    - Hybrid search
+      - Sparse + dense
+      - Hybrid sore
+      - Normalization
+      - Hybrid index
+      - Alpha param for managing distribution of sparse and dense
+
 #### Open Source LLM Inference
 - [llama.cpp](https://github.com/ggerganov/llama.cpp)
 - [ollama](https://github.com/ollama/ollama)
