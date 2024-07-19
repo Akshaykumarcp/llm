@@ -470,3 +470,10 @@ Pattern 1
   - https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints.html
   - https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints?view=azureml-api-2
 - [MLFlow]()
+
+#### LLM dashboard
+- [artificialanalysis](https://artificialanalysis.ai/)
+
+#### LLM pricing
+- [LLM Pricing Comparison Tool by philschmid](https://huggingface.co/spaces/philschmid/llm-pricing)
+
