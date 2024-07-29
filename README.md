@@ -1,4 +1,19 @@
-### LLM Business Use cases
+## Table of Contents  
+1. [LLM Business Use cases](#llm-business-use-cases)
+2. [Prompt engineering](#prompt-engineering)
+3. [Fine-Tune](#fine-tune)
+4. [LLM Architecture](#llm-architecture)
+5. [LLM Decoding strategies/methods](#llm-decoding-stategies-methods)
+6. [Building blocks of LLM Applications](#building-blocks-of-llm-applications)
+7. [LLM components](#llm-components)
+8. [Open Source LLM Inference](#open-source-llm-inference)
+9. [LLM from scratch](#llm-from-scratch)
+10. [GenAI cloud services](#genai-cloud-services)
+11. [LLM deployment](#llm-deployment)
+12. [LLM Dashboard](#llm-dashboard)
+13. [LLM pricing](#llm-pricing)
+
+## LLM Business Use cases
 - Customer engagement
   - Personalization & Customer segmentation
     - product/content rec based on behavior and preferences
@@ -29,11 +44,10 @@
 - QnA
 - Named entity recognition
 
-
-### Prompt engineering
+## Prompt engineering
 - Affects the distribution over vocabulary
 - In context learning and few shot prompting
-  - instruction and demonstrate of task
+  - Instruction and demonstrate of task
 - Prompt strategies
   - [1](https://www.promptingguide.ai/techniques)
   - Persona
@@ -46,7 +60,7 @@
       - Act as a nutritionist, I am going to tell you what I am eating and you will tell me about my eating choices.
       - Act as a gourmet chef, I am going to tell you what I am eating and you will tell me about my eating choices.
   - Question refinement pattern
-    - example:
+    - Example:
       - Whenever I ask a question, suggest a better question and ask me if i would like to use it instead.
       - To use this pattern, your prompt should make the following fundamental contextual statements:
         - From now on, whenever I ask a question, suggest a better version of the question to use instead
@@ -73,8 +87,8 @@
       - Assume that I am Persona Y.
     - You will need to replace "Y" with an appropriate persona, such as "have limited background in computer science" or "a healthcare expert". You will then need to specify the topic X that should be explained.
     - Examples:
-    - Explain large language models to me. Assume that I am a bird.
-    - Explain how the supply chains for US grocery stores work to me. Assume that I am Ghengis Khan. 
+      - Explain large language models to me. Assume that I am a bird.
+      - Explain how the supply chains for US grocery stores work to me. Assume that I am Ghengis Khan. 
   - Flipped interaction pattern
     - To use this pattern, your prompt should make the following fundamental contextual statements:
       - I would like you to ask me questions to achieve X
@@ -205,7 +219,7 @@ Ask me for the first action.
 - Best practices
   - [google](https://ai.google.dev/gemini-api/docs/prompting-strategies)
 
-### Fine-Tune
+## Fine-Tune
 - Domain adaption
 - Training style
   - Fine tune
@@ -217,7 +231,7 @@ Ask me for the first action.
   - Continual pre-training
     - doesn't require labeled data
 
-### LLM Decoding strategies/methods
+## LLM Decoding strategies/methods
 - [HF how to generate](https://huggingface.co/blog/how-to-generate), [code](https://colab.research.google.com/github/huggingface/blog/blob/main/notebooks/02_how_to_generate.ipynb)
 - process of geerating text with LLM
 - 1 token at a time
@@ -233,7 +247,7 @@ Ask me for the first action.
         - relative ordering of words is unaffeected by temp
     - beam search
 
-### Hallucination
+## Hallucination
 - generated text that is non-factual and/or ungrounded
 - methods to reduce:
   - RAG
@@ -241,7 +255,7 @@ Ask me for the first action.
     - cite sources
     - Example model: [TRUE](https://github.com/google-research/true)
 
-### LLM Architecture
+## LLM Architecture
 - Transformer
   - Encoders
     - Seq of words to an embedding (vec representation)
@@ -258,12 +272,12 @@ Ask me for the first action.
     - Examples: FLAN-UL2, T5/FLAN-T5, BART
     - Use case: translation
 
-### LLM types:
+## LLM types:
 - Multi-Modal
   - trained on multiple modalities, eg., language, images and audio
   - perform image to text, text to image, video and audio generation, etc
 
-### LLM components
+## LLM components
 
 - Tokenization
   - Option 1 - Transform text into word/token pieces
@@ -303,7 +317,7 @@ Ask me for the first action.
   - most likely next word
 - Prompt
 
-#### Building blocks of LLM Applications
+## Building blocks of LLM Applications
 - RAG
   - No training required
   - Generate text using additional info fected from an external data source
@@ -416,7 +430,7 @@ Ask me for the first action.
       - Hybrid index
       - Alpha param for managing distribution of sparse and dense
 
-#### Open Source LLM Inference
+## Open Source LLM Inference
 - [llama.cpp](https://github.com/ggerganov/llama.cpp)
 - [ollama](https://github.com/ollama/ollama)
 - [llamafile](https://github.com/Mozilla-Ocho/llamafile)
@@ -426,7 +440,7 @@ Ask me for the first action.
 - [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM)
 - [vllm](https://github.com/vllm-project/vllm)
 
-#### LLM from scratch
+## LLM from scratch
 
 - Simplified training process
 
@@ -458,22 +472,22 @@ Pattern 1
     - Datasets:
       - [CrystalCoderDatasets](https://huggingface.co/datasets/LLM360/CrystalCoderDatasets)
 
-### GenAI cloud services
+## GenAI cloud services
 - Azure
 - AWS
 - Oracle
   - [OCI Generative AI](https://www.oracle.com/in/artificial-intelligence/generative-ai/generative-ai-service/)
 
-#### LLM deployment
+## LLM deployment
 - [bentoml](https://docs.bentoml.com/en/latest/use-cases/large-language-models/vllm.html)
 - Managed services:
   - https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints.html
   - https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints?view=azureml-api-2
 - [MLFlow]()
 
-#### LLM dashboard
+## LLM dashboard
 - [artificialanalysis](https://artificialanalysis.ai/)
 
-#### LLM pricing
+## LLM pricing
 - [LLM Pricing Comparison Tool by philschmid](https://huggingface.co/spaces/philschmid/llm-pricing)
 
