@@ -472,6 +472,12 @@ Pattern 1
     - Datasets:
       - [CrystalCoderDatasets](https://huggingface.co/datasets/LLM360/CrystalCoderDatasets)
 
+## LLM Alignment 
+| Paper  | Link |
+| ------------- | ------------- |
+| Phi-3 Safety Post-Training: Aligning Language Models with a "Break-Fix" Cycle  | [paper](https://www.arxiv.org/abs/2407.13833)  |
+
+
 ## GenAI cloud services
 - Azure
 - AWS
