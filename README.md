@@ -12,6 +12,7 @@
 11. [LLM deployment](#llm-deployment)
 12. [LLM Dashboard](#llm-dashboard)
 13. [LLM pricing](#llm-pricing)
+14. [LLM approaches](llm-approaches)
 
 ## LLM Business Use cases
 - Customer engagement
@@ -497,3 +498,26 @@ Pattern 1
 ## LLM pricing
 - [LLM Pricing Comparison Tool by philschmid](https://huggingface.co/spaces/philschmid/llm-pricing)
 
+## LLM approaches
+
+- Bi-gram model
+  - paper: https://web.stanford.edu/~jurafsky/slp3/3.pdf
+  - Ref: [karpathy makemore](https://github.com/karpathy/makemore) and [YT](https://youtu.be/PaCmpygFfXo?si=Pc0aPEkQEVuCpso9)
+  - Example model:
+    - to learn statistic about words is using bi gram
+    - dataset: words in each line
+    - split word into a char and add prefix <S>, and suffix <E> as two special tokens
+    - count the occurences of characters between each other
+    - format in a 2D matrix form
+      - store in 2d array
+      - rows - first char
+      - col - second char
+      - tells us, how often the second follows the first
+    - add special token <.> for index of 2D array
+    - calculate probability distribution and draw sample from distribution (multinomial from pytorch)
+    - repeat same until index = 0
+    - Evaluate using negative log likelihood
+    - Cons:
+      - model doesn't know single char doesn't know before it there was some other charac
+- Neural Network
+  - TODO
