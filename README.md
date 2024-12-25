@@ -280,6 +280,22 @@ Ask me for the first action.
 
 ## LLM components
 
+- Attention
+  - Self attention
+  - Casual Attention
+  - Multi-head attention
+    - #Queries = #Keys = #Values
+    - Each head can focus on different parts of language.
+    - Inference - slow, accurate.
+  - Multi-query attention
+    - Many Queries, 1 Key, 1 Value
+    - Forcing the model to use different queries
+    - Inference - fast, inaccurate.
+  - Grouped-query attention
+    - #Queries = #/n Keys = #/n Values
+    - Inference - fast, accurate.
+  - Flash Attention
+    - 
 - Tokenization
   - Option 1 - Transform text into word/token pieces
     - word into computational form
