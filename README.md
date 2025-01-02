@@ -13,6 +13,7 @@
 12. [LLM Dashboard](#llm-dashboard)
 13. [LLM pricing](#llm-pricing)
 14. [LLM approaches](llm-approaches)
+15. [LLM Codes](llm-codes)
 
 ## LLM Business Use cases
 - Customer engagement
@@ -537,3 +538,7 @@ Pattern 1
       - model doesn't know single char doesn't know before it there was some other charac
 - Neural Network
   - TODO
+
+## LLM Codes
+- SLM
+  - [phi-2 offline version HF](https://github.com/cobusgreyling/hugging-face/blob/main/phi_2_offline_version.ipynb)
