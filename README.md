@@ -257,15 +257,20 @@ Ask me for the first action.
     - cite sources
     - Example model: [TRUE](https://github.com/google-research/true)
 
-## LLM Architecture
+## Transformer
 - Transformer
+  - Attention to input meaning
+  - Scale efficiently
+  - Parallel process
   - Encoders
+    - Encodes inputs with contextual understanding and produces one vector per input token.
     - Seq of words to an embedding (vec representation)
     - Examples: BERT/RoBERTa, DistilBERT
     - Use case: semantic search, classification, etc
   - Decoders
-    - sequence of words and output next word
-    - produce single token at a time
+    - Accepts input tokens and generates new tokens.
+    - Sequence of words and output next word
+    - Produce single token at a time
     - Examples: GPT-4, PaLM, BLOOM, LLAMA2, MPT
     - Use case: text generation, chat-style models, etc
   - Encoder-Decoder
