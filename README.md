@@ -14,6 +14,7 @@
 13. [LLM pricing](#llm-pricing)
 14. [LLM approaches](llm-approaches)
 15. [LLM Codes](llm-codes)
+16. [LLM Models](llm-models)
 
 ## LLM Business Use cases
 - Customer engagement
@@ -528,7 +529,7 @@ Pattern 1
   - Example model:
     - to learn statistic about words is using bi gram
     - dataset: words in each line
-    - split word into a char and add prefix <S>, and suffix <E> as two special tokens
+    - split word into a char and add prefix \<S>, and suffix \<E> as two special tokens
     - count the occurences of characters between each other
     - format in a 2D matrix form
       - store in 2d array
@@ -547,3 +548,10 @@ Pattern 1
 ## LLM Codes
 - SLM
   - [phi-2 offline version HF](https://github.com/cobusgreyling/hugging-face/blob/main/phi_2_offline_version.ipynb)
+
+## LLM Models
+
+ ### Document Parsing Model
+  | Model  | Link |
+  | ------------- | ------------- |
+  | Dolphin  | [paper](https://arxiv.org/html/2505.14059v1), [github](https://github.com/bytedance/Dolphin), [HF](https://huggingface.co/ByteDance/Dolphin), [demo](http://115.190.42.15:8888/dolphin/) |
